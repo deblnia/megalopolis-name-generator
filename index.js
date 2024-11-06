@@ -26,7 +26,7 @@ function generateName() {
   }
 
   const randomRomanName = romanNames[Math.floor(Math.random() * romanNames.length)];
-  const randomCarType = carAndMacNames[Math.floor(Math.random() * carTypes.length)];
+  const randomCarType = carAndMacNames[Math.floor(Math.random() * carAndMacNames.length)];
   
   // Combine the two to form a name
   const generatedName = `${randomRomanName} ${randomCarType}`;
