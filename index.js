@@ -8,7 +8,7 @@ const carAndMacNames = [
     "Big Sur", "Monterey", "Ventura", "Sonoma"
   ]
 // Fetch the Roman names from the JSON file
-fetch('../data/roman_names.json')
+fetch('/data/roman_names.json')
   .then(response => response.json())
   .then(data => {
     romanNames = data;
