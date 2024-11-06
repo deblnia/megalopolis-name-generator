@@ -8,7 +8,7 @@ const carAndMacNames = [
     "Big Sur", "Monterey", "Ventura", "Sonoma"
   ]
 // Fetch the Roman names from the JSON file
-fetch('/data/roman_names.json')
+fetch('https://raw.githubusercontent.com/deblnia/megalopolis-name-generator/refs/heads/main/data/roman_names.json')
   .then(response => response.json())
   .then(data => {
     romanNames = data;
@@ -26,7 +26,7 @@ function generateName() {
   }
 
   const randomRomanName = romanNames[Math.floor(Math.random() * romanNames.length)];
-  const randomCarType = carTypes[Math.floor(Math.random() * carTypes.length)];
+  const randomCarType = carAndMacNames[Math.floor(Math.random() * carTypes.length)];
   
   // Combine the two to form a name
   const generatedName = `${randomRomanName} ${randomCarType}`;
